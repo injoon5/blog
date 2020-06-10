@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>Blog</title>
+  <%- include('./head.ejs') %>
+</head>
+<body>
+  <%- include('./navbar.ejs') %>
+  <section class="hero is-medium is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          로그인
+        </h1>
+        <h2 class="subtitle">
+          BloKode blog에 로그인하세요.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <div class="field">
+      <div class="control has-icons-left has-icons-right">
+        <input id="username" class="input" type="text" placeholder="아이디">
+        <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fas fa-check"></i>
+        </span>
+      </div>
+      <p class="help"></p>
+    </div>
+
+    <div class="field">
+      <div class="control has-icons-left has-icons-right">
+        <input id="passwd" class="input" type="password" placeholder="비밀번호">
+        <span class="icon is-small is-left">
+          <i class="fas fa-key"></i>
+        </span>
+      </div>
+    </div>
+    
+    <div class="field is-grouped">
+      <div class="control">
+        <button id="create" class="button is-link"><strong>로그인</strong></button>
+        <p class="help is-danger"></p>
+    </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>BloKode blog</strong> by <a href="https://thoratica.net">thoratica</a>.
+        <br>
+        The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      </p>
+    </div>
+  </footer>
+  <script src="/js/login.js"></script>
+</body>
+</html>

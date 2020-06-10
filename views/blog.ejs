@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>Blog</title>
+  <%- include('./head.ejs') %>
+</head>
+
+<body>
+  <%- include('./navbar.ejs') %>
+  <section class="hero is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          <%= title %>
+        </h1>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <p style="font-size: 1.5rem; font-weight: bold;">글 <%= posts.length %>개</p>
+    <% for (let i of posts) { %>
+    <div class="card" style="margin-top: 1rem;">
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <p class="title is-4"><a href="/blog/<%= name %>/<%= i.id %>"><%= i.title %></a></p>
+          </div>
+        </div>
+        <div class="content">
+          <%= i.content.replace(/(<([^>]+)>)/ig,' ') %>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>BloKode blog</strong> by <a href="https://thoratica.net">thoratica</a>.
+        <br>
+        The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      </p>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box">
+        <h2 style="font-weight: bold; font-size: 1.3rem;">블로그 이름 바꾸기</h2>
+        <br>
+        <input id="newName" class="input" type="text" placeholder="새 이름">
+        <br>
+        <button id="change" class="button is-link" style="margin-top: .3rem;">바꾸기</button>
+      </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+  <script src="/js/blog.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>Blog</title>
+  <%- include('./head.ejs') %>
+</head>
+<body>
+  <%- include('./navbar.ejs') %>
+  <section class="hero is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          <%= title %>
+        </h1>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <%- content %>
+  </div>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>BloKode blog</strong> by <a href="https://thoratica.net">thoratica</a>.
+        <br>
+        The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

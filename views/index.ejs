@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>Blog</title>
+  <%- include('./head.ejs') %>
+</head>
+
+<body>
+  <%- include('./navbar.ejs') %>
+  <section class="hero is-medium is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          BloKode blog
+        </h1>
+        <h2 class="subtitle">
+          BloKode blog는 Node.js로 만들어진 블로그 서비스입니다.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            BloKode blog로 블로그를 시작해보세요.
+          </h1>
+          <h2 class="subtitle">
+            서비스는 안정적이지 않으니까 갑자기 없어져도 난 책임 없음 ㅅㄱ
+          </h2>
+          <a id="start" class="button is-primary" href="/signup"><strong>회원가입</strong></a>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>BloKode blog</strong> by <a href="https://thoratica.net">thoratica</a>.
+        <br>
+        The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

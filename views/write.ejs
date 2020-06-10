@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>Blog</title>
+  <%- include('./head.ejs') %>
+</head>
+<body>
+  <%- include('./navbar.ejs') %>
+  <section class="hero is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          글쓰기
+        </h1>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <input id="postTitle" class="input" placeholder="제목을 입력하세요." style="margin-bottom: 1rem;">
+    <textarea id="editor">Hello, World!</textarea>
+    <button class="button is-link post" style="margin-top: 1rem;">글쓰기</button>
+  </div>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>BloKode blog</strong> by <a href="https://thoratica.net">thoratica</a>.
+        <br>
+        The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      </p>
+    </div>
+  </footer>
+  <script src="https://cdn.tiny.cloud/1/mfetmx8pceh4vbxjazx5q8omsy8ar2aocvvcykwjf0gyrte1/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  <script src="/js/write.js"></script>
+</body>
+</html>
